@@ -1,0 +1,17 @@
+.idea/
+.vscode/
+.vs/
+.zed/
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+.claude/
+.cursor/
+.cursorrules
+.aider*
