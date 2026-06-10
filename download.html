@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Download classicQ - a QuakeWorld client for Windows, Linux and macOS.">
+    <meta name="theme-color" content="#2a1b13">
+    <meta property="og:title" content="classicQ - Download">
+    <meta property="og:description" content="Download classicQ - a QuakeWorld client for Windows, Linux and macOS.">
+    <meta property="og:image" content="https://classicq.github.io/assets/classicq.jpg">
+    <title>classicQ - Download</title>
+    <link rel="icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="nav" aria-label="Primary">
+            <a class="back-link" href="index.html" aria-label="Home">◄</a>
+            <a class="back-link" href="screenshots.html">Screenshots</a>
+            <a class="back-link active" href="download.html" aria-current="page">Download</a>
+            <a class="back-link" href="manual.html">Manual</a>
+        </nav>
+        <main class="tile">
+            <h1 class="visually-hidden">Download</h1>
+            <p>
+                classicQ needs the original game data:
+                <code>pak0.pak</code> and <code>pak1.pak</code>.<br>Both come
+                with every copy of Quake - grab one on
+                <a href="https://store.steampowered.com/app/2310/Quake/" target="_blank" rel="noopener">Steam</a>
+                or
+                <a href="https://www.gog.com/game/quake_the_offering" target="_blank" rel="noopener">GOG</a>
+                if you don't own it yet.
+            </p>
+            <p>
+                Install the game and find where Steam or GOG put it on
+                your disk.<br>Inside sits an&nbsp;<code>id1/</code> folder
+                with both paks - copy them somewhere handy, you'll need
+                them in a minute.
+            </p>
+
+            <h2>Optional: Verify pak files</h2>
+            <p>
+                Want to double-check you've got the correct files? Compare
+                their MD5 hashes against the table below. If&nbsp;they match,
+                you're good to go.
+            </p>
+            <table class="info-table">
+                <thead>
+                    <tr>
+                        <th scope="col">File</th><th scope="col">Size</th><th scope="col">MD5 checksum</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>pak0.pak</td><td>18 689 235 bytes</td><td class="hash">5906E5998FC3D896DDAF5E6A62E03ABB</td>
+                    </tr>
+                    <tr>
+                        <td>pak1.pak</td><td>34 257 856 bytes</td><td class="hash">D76B3E5678F0B64AC74CE5E340E6A685</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+                You can easily calculate MD5 checksums with PowerShell on
+                Windows:<br>
+                <code>Get-FileHash pak0.pak, pak1.pak -Algorithm MD5</code>
+            </p>
+            <p>
+                With Terminal on Linux:<br>
+                <code>md5sum pak0.pak pak1.pak</code>
+            </p>
+            <p>
+                Or with Terminal on macOS:<br>
+                <code>md5 pak0.pak pak1.pak</code>
+            </p>
+
+            <h2>Put everything together</h2>
+            <p>
+                You're almost finished! Now grab the latest classicQ
+                release from GitHub:
+            </p>
+            <div class="download-cta" id="downloads">
+                <a class="btn" href="https://github.com/classicq/classicq/releases/latest" target="_blank" rel="noopener">Download from GitHub</a>
+            </div>
+            <p>
+                Unzip it anywhere you like, then drop <code>pak0.pak</code>
+                and <code>pak1.pak</code> into its <code>id1/</code> folder.
+                <br><strong>Rename them to lowercase if they aren't already</strong>.
+            </p>
+            <p>
+                Congrats! You have finished installing classicQ!<br>
+                To start the game, go to the unzipped classicQ directory
+                and run it. Happy fragging!
+            </p>
+            <p>
+                BTW, if you're curious about the
+                <a href="https://github.com/classicq/classicq" target="_blank" rel="noopener">code</a>,
+                it's all on GitHub.
+                You can even compile classicQ yourself.
+            </p>
+        </main>
+    </div>
+
+<script>
+    (() => {
+        fetch('releases.json', { cache: 'no-cache' })
+            .then(r => r.ok ? r.json() : Promise.reject(new Error('HTTP ' + r.status)))
+            .then(data => {
+                const d = data.downloads;
+                if (!d || !d.windows || !d.linux || !d.macos) return;
+                const buttons = [
+                    ['Windows', d.windows],
+                    ['Linux', d.linux],
+                    ['macOS', d.macos],
+                ].map(([label, url]) => {
+                    const a = document.createElement('a');
+                    a.className = 'btn';
+                    a.href = url;
+                    a.textContent = label;
+                    return a;
+                });
+                document.getElementById('downloads').replaceChildren(...buttons);
+            })
+            .catch(err => {
+                console.warn('classicQ download.html: releases.json fetch failed, fallback button kept.', err);
+            });
+    })();
+    </script>
+</body>
+</html>

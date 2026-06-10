@@ -8,6 +8,7 @@
     --btn-to: #503727;
     --btn-hover-from: #dc290e;
     --btn-hover-to: #961b10;
+    --border-tile: #482a32;
 }
 
 * {
@@ -60,7 +61,6 @@ b, strong {
 
 code {
     color: var(--text-bright);
-    font-weight: bold;
     font-size: 1.05em;
     background: none;
     font-family: ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono",
@@ -71,6 +71,7 @@ code {
     display: flex;
     align-items: flex-start;
     min-height: 100vh;
+    min-height: 100dvh;
     padding: 80px 40px 80px clamp(32px, 9vw, 160px);
 }
 
@@ -88,7 +89,7 @@ code {
     background: rgba(42, 27, 19, 0.2);
     backdrop-filter: blur(10px) saturate(1.25);
     -webkit-backdrop-filter: blur(10px) saturate(1.25);
-    border: 1px solid #482A32;
+    border: 1px solid var(--border-tile);
     border-radius: 6px;
 }
 
@@ -200,8 +201,43 @@ code {
     padding: 32px 40px;
 }
 
-.tile h1:first-child {
+.tile > :first-child,
+.tile > .visually-hidden + * {
     margin-top: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+.info-table {
+    border-collapse: collapse;
+    margin: 12px 0;
+    background: var(--bg-fallback) url('backtile.gif');
+}
+
+.info-table th,
+.info-table td {
+    border: 1px solid var(--text);
+    padding: 6px 14px;
+    text-align: left;
+}
+
+.info-table th {
+    color: var(--text-bright);
+}
+
+.info-table .hash {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono",
+        Menlo, Consolas, monospace;
+    word-break: break-all;
 }
 
 .download-cta {
@@ -210,6 +246,11 @@ code {
     flex-wrap: wrap;
     gap: 10px;
     margin: 32px 0;
+}
+
+.download-cta .btn {
+    min-width: 160px;
+    text-align: center;
 }
 
 .screenshot-grid {
@@ -240,6 +281,9 @@ code {
 }
 
 @media (max-width: 600px) {
+    body {
+        background-attachment: scroll;
+    }
     .landing {
         padding-left: 16px;
         padding-right: 16px;
