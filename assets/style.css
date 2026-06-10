@@ -253,31 +253,48 @@ code {
     text-align: center;
 }
 
-.screenshot-grid {
+.screenshot-stack {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 18px;
     margin-top: 24px;
 }
 
-.screenshot {
-    margin: 0;
-    background: var(--bg-fallback);
-    border: 1px solid var(--border-dark);
-    overflow: hidden;
-}
-
-.screenshot img {
+.screenshot-stack img {
     display: block;
     width: 100%;
     height: auto;
+    border: 1px solid #3b2b1d;
+    cursor: zoom-in;
 }
 
-.screenshot figcaption {
-    padding: 10px 14px;
-    font-size: 0.95em;
-    color: var(--text);
-    opacity: 0.9;
+.lightbox {
+    margin: auto;
+    padding: 0;
+    border: none;
+    background: transparent;
+    max-width: none;
+    max-height: none;
+    cursor: zoom-out;
+}
+
+.lightbox img {
+    display: block;
+    width: min(95vw, calc(95vh * 16 / 9));
+    height: auto;
+    border: 1px solid #3b2b1d;
+}
+
+.lightbox:focus,
+.lightbox:focus-visible {
+    outline: none;
+}
+
+.lightbox::backdrop {
+    background: rgba(15, 12, 9, 0.9);
+}
+
+body:has(.lightbox[open]) {
+    overflow: hidden;
 }
 
 @media (max-width: 600px) {

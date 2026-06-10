@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="classicQ screenshots - gameplay and HUD.">
+    <meta name="theme-color" content="#2a1b13">
+    <meta property="og:title" content="classicQ - Screenshots">
+    <meta property="og:description" content="classicQ screenshots - gameplay and HUD.">
+    <meta property="og:image" content="https://classicq.github.io/screenshots/1.jpg">
+    <title>classicQ - Screenshots</title>
+    <link rel="icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="nav" aria-label="Primary">
+            <a class="back-link" href="index.html" aria-label="Home">◄</a>
+            <a class="back-link active" href="screenshots.html" aria-current="page">Screenshots</a>
+            <a class="back-link" href="download.html">Download</a>
+            <a class="back-link" href="manual.html">Manual</a>
+        </nav>
+        <main class="tile">
+            <h1 class="visually-hidden">Screenshots</h1>
+            <p>
+                A few shots straight from the game - click any of them
+                for a closer look.
+            </p>
+
+            <div class="screenshot-stack">
+                <img src="screenshots/1.jpg" alt="classicQ screenshot 1" width="1280" height="720">
+                <img src="screenshots/2.jpg" alt="classicQ screenshot 2" width="1280" height="720" loading="lazy">
+                <img src="screenshots/3.jpg" alt="classicQ screenshot 3" width="1280" height="720" loading="lazy">
+                <img src="screenshots/4.jpg" alt="classicQ screenshot 4" width="1280" height="720" loading="lazy">
+                <img src="screenshots/5.jpg" alt="classicQ screenshot 5" width="1280" height="720" loading="lazy">
+                <img src="screenshots/6.jpg" alt="classicQ screenshot 6" width="1280" height="720" loading="lazy">
+                <img src="screenshots/7.jpg" alt="classicQ screenshot 7" width="1280" height="720" loading="lazy">
+                <img src="screenshots/8.jpg" alt="classicQ screenshot 8" width="1280" height="720" loading="lazy">
+                <img src="screenshots/9.jpg" alt="classicQ screenshot 9" width="1280" height="720" loading="lazy">
+                <img src="screenshots/10.jpg" alt="classicQ screenshot 10" width="1280" height="720" loading="lazy">
+                <img src="screenshots/11.jpg" alt="classicQ screenshot 11" width="1280" height="720" loading="lazy">
+            </div>
+        </main>
+    </div>
+
+    <dialog class="lightbox" id="lightbox">
+        <img src="" alt="">
+    </dialog>
+
+<script>
+    (() => {
+        const lightbox = document.getElementById('lightbox');
+        const full = lightbox.querySelector('img');
+        document.querySelectorAll('.screenshot-stack img').forEach(img => {
+            img.addEventListener('click', () => {
+                full.src = img.src;
+                full.alt = img.alt;
+                lightbox.showModal();
+            });
+        });
+        lightbox.addEventListener('click', () => lightbox.close());
+    })();
+    </script>
+</body>
+</html>
