@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="classicQ User Manual - controls, commands, and gameplay tips.">
+    <meta name="theme-color" content="#2a1b13">
+    <meta property="og:title" content="classicQ - Manual">
+    <meta property="og:description" content="classicQ User Manual - controls, commands, and gameplay tips.">
+    <meta property="og:image" content="https://classicq.github.io/assets/ogimage.jpg">
+    <title>classicQ - Manual</title>
+    <link rel="icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="nav" aria-label="Primary">
+            <a class="back-link" href="index.html" aria-label="Home">◄</a>
+            <a class="back-link" href="screenshots.html">Screenshots</a>
+            <a class="back-link" href="download.html">Download</a>
+            <a class="back-link active" href="manual.html" aria-current="page">Manual</a>
+        </nav>
+        <main class="tile">
+            <h1 class="visually-hidden">Manual</h1>
+            <p>
+                Everything you need for your first frags - the rest
+                you'll pick up on the server.
+            </p>
+
+            <h2>Server browser</h2>
+            <p>
+                Press <code>F5</code> to open the server browser.<br>Pick a server with the arrow keys
+                (hold <code>SHIFT</code> or <code>CTRL</code> to jump faster)
+                and join with <code>ENTER</code>.
+            </p>
+            <p>
+                <code>ENTER</code> &ndash; join the selected server. If a match is already running, you'll hop in as a spectator<br>
+                <code>CTRL</code> + <code>ENTER</code> &ndash; join as a spectator right away<br>
+                <code>R</code> &ndash; refresh ping and player count for the selected server<br>
+                <code>CTRL</code> + <code>R</code> &ndash; refresh info for all listed servers<br>
+            </p>
+            
+            <h2>Default keys</h2>
+            <p>
+                <code>W</code> &ndash; move forward<br>
+                <code>S</code> &ndash; move back<br>
+                <code>A</code> &ndash; move left<br>
+                <code>D</code> &ndash; move right<br>
+                <code>SPACE</code> &ndash; jump<br>
+            </p>
+            <p>
+                <code>Left Mouse Button</code> &ndash; primary attack (Rocket Launcher)<br>
+                <code>Right Mouse Button</code> &ndash; secondary attack (Thunderbolt)<br>
+                <code>Middle Mouse Button</code> &ndash; tertiary attack (Grenade Launcher)<br>
+            </p>
+            <p>
+                <code>Q</code> &ndash; Axe<br>
+                <code>E</code> &ndash; Shotgun<br>
+                <code>SHIFT</code> &ndash; Nailgun<br>
+            </p>
+            <p>
+                <code>T</code> &ndash; say something<br>
+                <code>G</code> &ndash; say something to your team<br>
+            </p>
+            <p>
+                <code>F5</code> &ndash; open the server browser<br>
+                <code>F6</code> &ndash; send a message with the IP and hostname of the selected server<br>
+                <code>F12</code> &ndash; take a screenshot<br>
+            </p>
+            <p>
+                You can rebind everything in Options > Customize controls.
+            </p>
+
+            <h2>Essential commands</h2>
+            <p>
+                To open the console press the <code>~</code> (tilde) key, located just below <code>ESC</code>.
+            </p>
+            <p>
+                <code>observe</code> &ndash; reconnect as an observer<br>
+                <code>observe &lt;server&gt;</code> &ndash; connect to a specific host as an observer<br>
+                <code>join</code> &ndash; join as a player (while in observer mode)<br>
+                <code>join &lt;server&gt;</code> &ndash; connect to a specific host<br>
+                <code>enemycolor 12 12</code> &ndash; make all enemies appear yellow<br>
+                <code>teamcolor 4 4</code> &ndash; make all team members appear red<br>
+                <code>enemyskin base</code> &ndash; disable enemy skins<br>
+                <code>teamskin base</code> &ndash; disable team skins<br>
+                <code>reconnect</code> &ndash; reconnect to the server<br>
+                <code>disconnect</code> &ndash; disconnect from the server<br>
+            </p>
+
+            <h2>Changing maps</h2>
+            <p>
+                <code>maps</code> displays the list of all available maps on the server. To change
+                map, type its name. <code>dm2</code>, <code>dm4</code>, <code>dm6</code>,
+                <code>ztndm3</code> and <code>aerowalk</code> are essential and you should learn
+                all of them. For teamplay the standard maps are <code>dm2</code>, <code>dm4</code>,
+                <code>dm6</code>, <code>ztndm3</code>, <code>aerowalk</code>, <code>dm3</code>
+                and <code>e1m2</code>.
+            </p>
+            <p>
+                On FFA (Free For All) servers you can also use <code>next_map</code> to vote for a map change.
+            </p>
+
+            <h2>Starting a match</h2>
+            <p>
+                Only FFA servers let you play straight away. If you want to get good at Quake,
+                try to avoid FFA and focus on&nbsp;duels and teamplay first.
+            </p>
+            <p>
+                KTX (Kombat Teams eXtreme) is considered standard and is the most common server
+                mod in QuakeWorld.
+            </p>
+            <p>
+                After joining a KTX server, set the gameplay mode by typing <code>1on1</code>
+                (duel), <code>2on2</code> or <code>4on4</code> for teamplay. Then each player
+                types <code>ready</code> to start the match. Type <code>break</code> to leave
+                <code>ready</code> or to vote to stop the match.
+            </p>
+            <p>
+                In teamplay modes the <code>rpickup</code> command randomly assigns players to
+                teams. <code>whonot</code> shows which players are not ready.
+            </p>
+
+            <h2>Gibs</h2>
+            <p>
+                Some players prefer to play with gibs and corpses disabled.
+                Enable the filters with: <code>cl_gibFilter 1</code> and&nbsp;<code>cl_deadbodyFilter 1</code>.
+            </p>
+
+            <h2>Demos</h2>
+            <p>
+                To view demos, open the main menu (<code>ESC</code>), then Multiplayer > Demos.
+                classicQ ships with a few recordings.
+            </p>
+            <p>
+                You will often see "Server starts recording" / "Server recording completed" in
+                the console. Most QuakeWorld servers automatically record each match. To list
+                server-side demos use <code>cmd&nbsp;dlist</code>.
+                <code>cmd&nbsp;dl&nbsp;&lt;number&gt;</code> downloads the selected demo,
+                <code>cmd&nbsp;dl&nbsp;.</code> (dot) downloads the latest, and
+                <code>cmd&nbsp;dl&nbsp;cancel</code> cancels.
+            </p>
+
+            <h2>Teamplay messages</h2>
+            <p>
+                You can quickly send automated notifications to your team using the keys below.
+                It may look confusing at&nbsp;first, but once you start playing team games it becomes
+                self-explanatory.
+            </p>
+            <p>
+                <code>1</code> &ndash; Enemy [<span class="placeholder">Powerup</span>]<br>
+                <code>2</code> &ndash; Team [<span class="placeholder">Powerup</span>]<br>
+                <code>3</code> &ndash; Quad Dead / Over<br>
+                <code>4</code> &ndash; Get Quad<br>
+                <code>5</code> &ndash; Get Pent<br>
+                <code>6</code> &ndash; Replace [<span class="placeholder">Location</span>]<br>
+                <code>CTRL</code> &ndash; [<span class="placeholder">Item you look at</span>] at [<span class="placeholder">Item Location</span>]<br>
+                <code>ALT</code> &ndash; [<span class="placeholder">Armor</span>] / [<span class="placeholder">Health</span>] [<span class="placeholder">Best Weapon</span>]:[<span class="placeholder">Ammo</span>] [<span class="placeholder">Location</span>] c:[<span class="placeholder">Cells</span>] [<span class="placeholder">Powerup</span>]<br>
+                <code>Z</code> &ndash; Safe [<span class="placeholder">Location</span>] [<span class="placeholder">Best Weapon</span>]:[<span class="placeholder">Ammo</span>]<br>
+                <code>X</code> &ndash; Help [<span class="placeholder">Location</span>] [<span class="placeholder">Number of Enemies</span>]<br>
+                <code>C</code> &ndash; Coming [<span class="placeholder">Location</span>]<br>
+                <code>R</code> &ndash; Need [<span class="placeholder">What you need</span>] [<span class="placeholder">Location</span>]<br>
+                <code>F</code> &ndash; Took [<span class="placeholder">Item you took</span>] [<span class="placeholder">Item Location</span>]<br>
+                <code>V</code> &ndash; Lost [<span class="placeholder">Location where you died</span>] [<span class="placeholder">Number of Enemies</span>]<br>
+                <code>B</code> &ndash; Enemy Slipped [<span class="placeholder">Location</span>]<br>
+                <code>Y</code> &ndash; Yes / OK [<span class="placeholder">Location</span>]<br>
+                <code>H</code> &ndash; Trick [<span class="placeholder">Location</span>]<br>
+                <code>N</code> &ndash; No / Cancel [<span class="placeholder">Location</span>]<br>
+                <code>U</code> &ndash; You Take [<span class="placeholder">Location</span>]<br>
+                <code>J</code> &ndash; Waiting [<span class="placeholder">Location</span>]<br>
+                <code>K</code> &ndash; Kill me [<span class="placeholder">Location</span>] [<span class="placeholder">Best Weapon</span>]:[<span class="placeholder">Ammo</span>]<br>
+            </p>
+
+            <h2>Community</h2>
+            <p>
+                The QuakeWorld community hangs out on Discord - grab the
+                invite at
+                <a href="https://quake.world/" target="_blank" rel="noopener">quake.world</a>
+                and, while you're there, catch a live match right in your
+                browser. For everything else, there's
+                <a href="https://www.quakeworld.nu/" target="_blank" rel="noopener">quakeworld.nu</a>.
+            </p>
+        </main>
+    </div>
+</body>
+</html>

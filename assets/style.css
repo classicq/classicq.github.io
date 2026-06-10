@@ -67,6 +67,10 @@ code {
         Menlo, Consolas, monospace;
 }
 
+.placeholder {
+    color: var(--text-bright);
+}
+
 .landing {
     display: flex;
     align-items: flex-start;
