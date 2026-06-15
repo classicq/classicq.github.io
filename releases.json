@@ -1,8 +1,8 @@
 {
-  "version": "3.0.2",
+  "version": "3.0.3",
   "downloads": {
-    "windows": "https://github.com/classicq/classicq/releases/download/v3.0.2/classicQ-3.0.2-windows-amd64.zip",
-    "linux": "https://github.com/classicq/classicq/releases/download/v3.0.2/classicQ-3.0.2-linux-amd64.zip",
-    "macos": "https://github.com/classicq/classicq/releases/download/v3.0.2/classicQ-3.0.2-macos-arm64.zip"
+    "windows": "https://github.com/classicq/classicq/releases/download/v3.0.3/classicQ-3.0.3-windows-amd64.zip",
+    "linux": "https://github.com/classicq/classicq/releases/download/v3.0.3/classicQ-3.0.3-linux-amd64.zip",
+    "macos": "https://github.com/classicq/classicq/releases/download/v3.0.3/classicQ-3.0.3-macos-arm64.zip"
   }
 }
