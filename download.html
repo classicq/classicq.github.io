@@ -87,6 +87,12 @@
                 <br><strong>Rename them to lowercase if they aren't already</strong>.
             </p>
             <p>
+                <strong>macOS:</strong> Gatekeeper might claim the downloaded
+                app is "damaged". It isn't - the app is just not notarized
+                with Apple. Clear the quarantine flag and it runs fine:<br>
+                <code>xattr -cr classicq-macos-arm64.app</code>
+            </p>
+            <p>
                 Congrats! You have finished installing classicQ!<br>
                 To start the game, go to the unzipped classicQ directory
                 and run it. Happy fragging!
