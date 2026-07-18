@@ -8,5 +8,4 @@ Just the source for the website at https://classicq.github.io/.
 
 - classicQ source: [classicq/classicq](https://github.com/classicq/classicq)
 - Latest release: [classicq/classicq/releases/latest](https://github.com/classicq/classicq/releases/latest)
-- Discussions: [classicq/classicq/discussions](https://github.com/classicq/classicq/discussions)
 - Issues: [classicq/classicq/issues](https://github.com/classicq/classicq/issues)
